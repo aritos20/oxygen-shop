@@ -1,0 +1,24 @@
+@use 'header';
+@use 'section-1';
+@use 'section-2';
+@use 'section-3';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+}
+
+:root {
+    --main-blue: #08a6e4;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #A5A5A5;
+    --pink: #FB3B64;
+    --green: #55DFB4;
+    --gray-background: #F7F7F7;
+}

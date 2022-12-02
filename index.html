@@ -4,67 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@300;400;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
     <title>OXYGEN Shop</title>
 </head>
 <body>
-    <header>
-        <h1>OXYGENShop</h1>
-        <img src="/images/menu.png" alt="Dropdown menu icon">
+    <header class="header">
+			<div class="header__title">
+				<h1>OXYGENShop</h1>
+			</div>
+			<nav class="header__nav">
+				<img class="header__burger-menu" src="/images/menu.png" alt="Dropdown menu icon">
+			</nav>
     </header>
     <main>
-        <section>
-            <h2>Sell More!</h2>
-            <p>Open shop on our platform and increase your sales</p>
-            <button>Open your shop</button>
-            <img src="/images/background_1.png" alt="a background image of a human typing in a laptop">
+
+        <section class="section-1">
+			<div class="section-1__info">
+            	<h2>Sell More!</h2>
+				<p>Open shop on our platform and increase your sales</p>
+				<button type="button">Open your shop</button>
+			</div>
+			<div class="section-1__img">
+            	<img src="/images/background_1.png" alt="a background image of a human typing in a laptop">
+			</div>
         </section>
-        <section>
-            <h3>The most popular sales platform in country</h3>
-            <div>
-                <img src="/images/human_shape.png" alt="a human shape">
-                <span></span>
-                <p>100000+</p>
-                <p>daily entries</p>
+
+        <section class="section-2">
+            <h3 class="section-2__title">The most popular sales platform in country</h3>
+            <div class="section-2__info-1">
+				<span class="section-2__dot--pink">
+					<img src="/images/human_shape.png" alt="a human shape">
+				</span>
+                <p class="section-2__stats">100000+</p>
+                <p class="section-2__text">daily entries</p>
             </div>
-            <div>
-                <img src="/images/eye.png" alt="an eye">
-                <span></span>
-                <p>2000000+</p>
-                <p>seen products every day</p>
+            <div class="section-2__info-2">
+                <span class="section-2__dot--blue">
+					<img src="/images/eye.png" alt="an eye">
+				</span>
+                <p class="section-2__stats">2000000+</p>
+                <p class="section-2__text">seen products every day</p>
             </div>
-			<div>
-                <img src="/images/posts.png" alt="posts">
-                <span></span>
-                <p>10000+</p>
-                <p>added posts daily</p>
+			<div class="section-2__info-3">
+				<span class="section-2__dot--green">
+					<img src="/images/posts.png" alt="posts">
+				</span>
+                <p class="section-2__stats">10000+</p>
+                <p class="section-2__text">added posts daily</p>
             </div>
         </section>
-		<section>
-			<div>
-				<div>
+
+		<section class="section-3">
+			<div class="section-3__card-1">
+				<div class="section-3__img-shape-1">
+					<span class="section-3__shape-1"></span>
 					<img src="/images/laptop.png" alt="a laptop">
-					<span></span>
 				</div>
-				<h4>Be always first</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				<h4 class="section-3__title">Be always first</h4>
+				<p class="section-3__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 			</div>
-			<div>
-				<div>
-					<img src="/images/iphone.png" alt="an iphone">
-					<span></span>
-				</div>
-				<h4>Your shop is where you are!</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+			<div class="section-3__card-2">
+					<span class="section-3__shape-2">
+						<img src="/images/iphone.png" alt="an iphone">
+					</span>
+				<h4 class="section-3__title">Your shop is where you are!</h4>
+				<p class="section-3__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 			</div>
-			<div>
-				<h4>Increase recognition your brand!</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-				<div>
-					<img src="/images/trumpet.png" alt="a trumpet">
-				</div>
+			<div class="section-3__card-3">
+				<h4 class="section-3__title">Increase recognition your brand!</h4>
+				<p class="section-3__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+			</div>
+			<div class="section-3__img">
+				<img src="/images/trumpet.png" alt="a trumpet">
 			</div>
 		</section>
+
 		<section>
 			<h4>Pricing</h4>
 			<div>
@@ -132,9 +147,32 @@
 				<p>123 456 789</p>
 			</div>
 			<form action="">
-				<label for="POST">Nombre:</label>
-				<input type="text" name="name" id="POST">
+				<div>
+					<label for="name">NAME</label>
+					<input type="text" name="name" id="name">
+				</div>
+				<div>
+					<label for="email">EMAIL</label>
+					<input type="text" name="name" id="email">
+				</div>
 			</form>
+			<div>
+				<input type="checkbox" name="name" id="checkbox">
+				<label for="checkbox">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+			</div>
+			<div>
+				<button>Send</button>
+			</div>
+			<footer>
+				<div>
+					<p>OXYGENShop</p>
+					<p>© 2022 OXYGEN, All Rights Reserved</p>
+				</div>
+				<div>
+					<img src="/images/twitter_logo.png" alt="twitter logo">
+					<img src="/images/facebook_logo.png" alt="facebook_logo">
+				</div>
+			</footer>
 		</section>
     </main>
 </body>

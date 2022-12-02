@@ -1,0 +1,218 @@
+.header {
+  width: 100%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+  height: 70px;
+}
+.header__title {
+  display: inline-block;
+  width: 82%;
+  margin-top: 17px;
+  margin-left: 6.67%;
+}
+.header__title h1 {
+  display: inline;
+  font-family: "Raleway", sans-serif;
+  color: var(--main-blue);
+  font-weight: 300;
+  font-size: 32px;
+}
+.header__nav {
+  display: inline;
+  width: 13%;
+}
+
+.section-1 {
+  margin-top: 100px;
+}
+.section-1__info {
+  text-align: center;
+}
+.section-1__info h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+.section-1__info p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: auto;
+  margin-bottom: 28px;
+  width: 80%;
+}
+.section-1__info button {
+  width: 310px;
+  height: 67px;
+  background: var(--main-blue);
+  border: none;
+  border-radius: 40px;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  font-size: 16px;
+  font-family: "Open Sans";
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 51px;
+}
+.section-1__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-2 {
+  margin-top: 13px;
+}
+.section-2__title {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: var(--black);
+  margin: auto;
+  margin-bottom: 25px;
+  width: 80%;
+}
+.section-2__info-1, .section-2__info-2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.section-2__info-3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-2__stats {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 5.96px;
+  color: var(--black);
+  margin-top: 13px;
+}
+.section-2__text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--gray);
+  margin: auto;
+  width: 36%;
+}
+.section-2__dot--pink {
+  width: 62.71px;
+  height: 62.71px;
+  background-color: var(--pink);
+  border-radius: 50%;
+  display: inline-block;
+}
+.section-2__dot--pink img {
+  margin-left: 45%;
+}
+.section-2__dot--blue {
+  width: 62.71px;
+  height: 62.71px;
+  background-color: var(--main-blue);
+  border-radius: 50%;
+  display: inline-block;
+}
+.section-2__dot--blue img {
+  margin-left: 35%;
+  margin-top: 20%;
+}
+.section-2__dot--green {
+  width: 62.71px;
+  height: 62.71px;
+  background-color: var(--green);
+  border-radius: 50%;
+  display: inline-block;
+}
+.section-2__dot--green img {
+  margin-left: 50%;
+  margin-top: 10%;
+}
+
+.section-3 {
+  background: var(--gray-background);
+  padding-top: 42px;
+}
+.section-3__card-1, .section-3__card-2 {
+  margin: 0 auto;
+  width: 83%;
+  height: 370px;
+  border: 1px solid #E8E9ED;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+.section-3__card-3 {
+  margin: 0 auto;
+  width: 83%;
+  height: 298px;
+  background: var(--white);
+  border-radius: 5px;
+  border: 1px solid #E8E9ED;
+}
+.section-3__card-2 {
+  margin-top: 41px;
+  margin-bottom: 42px;
+}
+.section-3__shape-1 {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: var(--pink);
+  border-radius: 41px;
+  transform: rotate(-45deg);
+}
+.section-3__shape-2 {
+  display: inline-block;
+  width: 131px;
+  height: 131px;
+  border-radius: 50%;
+  background: var(--main-blue);
+  margin-left: 28%;
+  margin-top: 12px;
+}
+.section-3__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--black);
+  margin-top: 26px;
+  width: 70%;
+  margin-left: 7%;
+}
+.section-3__text {
+  font-family: "Open sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--black);
+  width: 90%;
+  margin-top: 9%;
+}
+.section-3__img {
+  margin: 0 auto;
+  width: 83%;
+  background: var(--green);
+  border-radius: 5px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+:root {
+  --main-blue: #08a6e4;
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray: #A5A5A5;
+  --pink: #FB3B64;
+  --green: #55DFB4;
+  --gray-background: #F7F7F7;
+}
+
+/*# sourceMappingURL=styles.css.map */

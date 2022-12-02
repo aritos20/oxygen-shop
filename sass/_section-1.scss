@@ -1,0 +1,41 @@
+.section-1 {
+    margin-top: 100px;
+
+    &__info {
+        text-align: center;
+
+        h2 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            margin: auto;
+            margin-bottom: 28px;
+            width: 80%;
+        }
+        button {
+            width: 310px;
+            height: 67px;
+            background: var(--main-blue);
+            border: none;
+            border-radius: 40px;
+            box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+            font-size: 16px;
+            font-family: 'Open Sans';
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 51px;
+        }
+    }
+
+    &__img img {
+        width: 100%;
+        object-fit: cover;
+    }
+}

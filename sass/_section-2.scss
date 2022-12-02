@@ -1,0 +1,77 @@
+@mixin dot($color: var(--main-blue)) {
+    width: 62.71px;
+    height: 62.71px;
+    background-color: $color;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.section-2 {
+    margin-top: 13px;
+
+    &__title {
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        font-size: 30px;
+        color: var(--black);
+        margin: auto;
+        margin-bottom: 25px;
+        width: 80%;
+    }
+
+    &__info-1,
+    &__info-2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    &__info-3 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__stats {
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 5.96px;
+        color: var(--black);
+        margin-top: 13px;
+    }
+
+    &__text {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        color: var(--gray);
+        margin: auto;
+        width: 36%;
+    }
+
+    &__dot--pink {
+        @include dot(var(--pink));
+
+        img {
+            margin-left: 45%;
+        }
+    }
+    
+    &__dot--blue {
+        @include dot(var(--main-blue));
+        
+        img {
+            margin-left: 35%;
+            margin-top: 20%;
+        }
+    }
+
+    &__dot--green {
+        @include dot(var(--green));
+
+        img {
+            margin-left: 50%;
+            margin-top: 10%;
+        }
+    }
+}
