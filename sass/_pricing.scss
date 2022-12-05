@@ -1,0 +1,96 @@
+@mixin plan_name() {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--plan-name);
+}
+
+@mixin plan_price($number-color) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 46px;
+    font-weight: 300;
+    color: $number-color;
+}
+
+@mixin button($button-color) {
+    width: 150px;
+    height: 50px;
+    background: $button-color;
+    border: none;
+    border-radius: 23px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--white);
+}
+
+.pricing {
+
+    &__title {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 53px;
+    }
+
+    &__basic {
+        width: 78%;
+        height: 251px;
+        margin: 0 auto;
+        margin-top: 14px;
+        border: 1px solid var(--pink);
+        border-radius: 18px;
+
+        p:nth-child(1) {
+            @include plan_name();
+        }
+
+        p:nth-child(2) {
+            @include plan_price(var(--pink));
+        }
+    }
+
+    &__price {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 17%;
+        margin-top: 70px;
+        width: 25%;
+    }
+    
+    &__benefits {
+        display: inline-block;
+        width: 55%;
+        margin-top: 25px;
+        margin-bottom: 51px;
+
+        li {
+            list-style: none;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        li img {
+            margin-right: 10px;
+        }
+    }
+
+    &__button-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__button--red {
+        @include button(var(--red));
+        
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -13px);
+    }
+}

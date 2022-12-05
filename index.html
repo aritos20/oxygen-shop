@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@300;400;800&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
     <title>OXYGEN Shop</title>
 </head>
@@ -58,54 +58,64 @@
 		<section class="section-3">
 			<div class="section-3__card-1">
 				<div class="section-3__img-shape-1">
-					<span class="section-3__shape-1"></span>
 					<img src="/images/laptop.png" alt="a laptop">
+					<span class="section-3__shape-1"></span>
 				</div>
-				<h4 class="section-3__title">Be always first</h4>
-				<p class="section-3__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				<div class="section-3__text-1">
+					<h4 class="section-3__title-1">Be always first</h4>
+					<p class="section-3__info-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</div>
 			</div>
 			<div class="section-3__card-2">
+				<div class="section-3__img-shape-2">
 					<span class="section-3__shape-2">
 						<img src="/images/iphone.png" alt="an iphone">
 					</span>
-				<h4 class="section-3__title">Your shop is where you are!</h4>
-				<p class="section-3__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</div>
+				<div class="section-3__text-2">
+					<h4 class="section-3__title-2">Your shop is where you are!</h4>
+					<p class="section-3__info-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</div>
 			</div>
 			<div class="section-3__card-3">
-				<h4 class="section-3__title">Increase recognition your brand!</h4>
-				<p class="section-3__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				<div class="section-3__text-3">
+					<h4 class="section-3__title-3">Increase recognition your brand!</h4>
+					<p class="section-3__info-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</div>
 			</div>
-			<div class="section-3__img">
+			<div class="section-3__trumpet">
 				<img src="/images/trumpet.png" alt="a trumpet">
 			</div>
 		</section>
 
-		<section>
-			<h4>Pricing</h4>
-			<div>
-				<div>
+		<section class="pricing">
+			<h4 class="pricing__title">Pricing</h4>
+			<div class="pricing__basic">
+				<div class="pricing__price">
 					<p>Basic</p>
 					<p>$0</p>
 				</div>
-				<div>
-					<ul>
-						<li>100 MB HDD</li>
-						<li>1 Subdomain</li>
-						<li>2 E-mails</li>
-						<li>Two years license</li>
-						<li>Full support</li>
+				<div class="pricing__benefits">
+					<ul class="pricing__checkboxes">
+						<li><img src="./images/green_checkbox.png" alt="checkbox marked">100 MB HDD</li>
+						<li><img src="./images/green_checkbox.png" alt="checkbox marked">1 Subdomain</li>
+						<li><img src="./images/green_checkbox.png" alt="checkbox marked">2 E-mails</li>
+						<li><img src="./images/red_checkbox.png" alt="checkbox unmarked">Two years license</li>
+						<li><img src="./images/red_checkbox.png" alt="checkbox unmarked">Full support</li>
 					</ul>
 				</div>
-				<button>Begin</button>
+				<div class="pricing__button-container">
+					<button class="pricing__button--red">Begin</button>
+				</div>
 			</div>
-			<div>
-				<div>
+			<div class="pricing__professional">
+				<div class="pricing__price">
 					<p>Professional</p>
 					<p>$25</p>
 					<p>Limited offer</p>
 				</div>
-				<div>
-					<ul>
+				<div class="pricing__benefits">
+					<ul class="pricing__checkboxes">
 						<li>500 MB HDD</li>
 						<li>2 Subdomains</li>
 						<li>5 E-mails</li>
@@ -113,16 +123,16 @@
 						<li>Full support</li>
 					</ul>
 				</div>
-				<button>Begin</button>
+				<button class="price__button--blue">Begin</button>
 			</div>
-			<div>
-				<div>
+			<div class="price__premium">
+				<div class="pricing__price">
 					<p>Premium</p>
 					<p>$60</p>
 					<p>Limited offer</p>
 				</div>
-				<div>
-					<ul>
+				<div class="pricing__benefits">
+					<ul class="pricing__checkboxes">
 						<li>2 GB HDD</li>
 						<li>5 Subdomains</li>
 						<li>20 E-mails</li>
@@ -130,7 +140,7 @@
 						<li>Full support</li>
 					</ul>
 				</div>
-				<button>Begin</button>
+				<button class="pricing__button--green">Begin</button>
 			</div>
 		</section>
 		<section>
