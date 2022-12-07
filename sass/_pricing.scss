@@ -24,6 +24,13 @@
     color: var(--white);
 }
 
+@mixin pricing_cards($color-card) {
+    width: 78%;
+    margin: 0 auto;
+    border: 1px solid $color-card;
+    border-radius: 18px;
+}
+
 .pricing {
 
     &__title {
@@ -35,12 +42,8 @@
     }
 
     &__basic {
-        width: 78%;
-        height: 251px;
-        margin: 0 auto;
+        @include pricing_cards(var(--pink));
         margin-top: 14px;
-        border: 1px solid var(--pink);
-        border-radius: 18px;
 
         p:nth-child(1) {
             @include plan_name();
@@ -51,7 +54,7 @@
         }
     }
 
-    &__price {
+    &__price-basic {
         display: inline-block;
         vertical-align: top;
         margin-left: 17%;
@@ -59,7 +62,7 @@
         width: 25%;
     }
     
-    &__benefits {
+    &__benefits-basic {
         display: inline-block;
         width: 55%;
         margin-top: 25px;
@@ -91,6 +94,120 @@
         
         position: absolute;
         left: 50%;
-        transform: translate(-50%, -13px);
+        transform: translate(-50%, -25px);
+    }
+
+    &__button--blue {
+        @include button(var(--blue-price));
+
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -25px);
+    }
+
+    &__button--green {
+        @include button(var(--green));
+
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -25px);
+    }
+
+    &__professional {
+        @include pricing_cards(var(--blue-price));
+        margin-top: 54px;
+
+        p:nth-child(1) {
+            @include plan_name();
+        }
+
+        p:nth-child(2) {
+            @include plan_price(var(--blue-price));
+        }
+
+        p:nth-child(3) {
+            font-family: 'Raleway', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+
+    &__price-professional {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 70px;
+        width: 50%;
+        margin-left: 5%;
+        text-align: center;
+    }
+
+    &__benefits-professional {
+        display: inline-block;
+        width: 40%;
+        margin-top: 25px;
+        margin-bottom: 51px;
+
+        li {
+            list-style: none;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        li img {
+            margin-right: 10px;
+        }
+    }
+
+    &__premium {
+        @include pricing_cards(var(--green));
+        margin-top: 54px;
+
+        p:nth-child(1) {
+            @include plan_name();
+        }
+
+        p:nth-child(2) {
+            @include plan_price(var(--green));
+        }
+
+        p:nth-child(3) {
+            font-family: 'Raleway', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+
+    &__price-premium {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 70px;
+        width: 40%;
+        margin-left: 5%;
+        text-align: center;
+    }
+
+    &__benefits-premium {
+        display: inline-block;
+        width: 50%;
+        margin-top: 25px;
+        margin-bottom: 51px;
+
+        li {
+            list-style: none;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        li img {
+            margin-right: 10px;
+        }
     }
 }

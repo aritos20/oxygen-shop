@@ -183,7 +183,7 @@
   font-size: 30px;
   font-weight: 400;
   color: var(--black);
-  width: 70%;
+  width: 85%;
   margin-bottom: 60px;
 }
 .section-3__info-1 {
@@ -217,7 +217,7 @@
   font-size: 30px;
   font-weight: 400;
   color: var(--black);
-  width: 70%;
+  width: 85%;
 }
 .section-3__info-2 {
   font-family: "Open sans", sans-serif;
@@ -236,7 +236,7 @@
   font-size: 30px;
   font-weight: 400;
   color: var(--black);
-  width: 70%;
+  width: 85%;
 }
 .section-3__info-3 {
   font-family: "Open sans", sans-serif;
@@ -268,11 +268,10 @@
 }
 .pricing__basic {
   width: 78%;
-  height: 251px;
   margin: 0 auto;
-  margin-top: 14px;
   border: 1px solid var(--pink);
   border-radius: 18px;
+  margin-top: 14px;
 }
 .pricing__basic p:nth-child(1) {
   font-family: "Raleway", sans-serif;
@@ -286,29 +285,29 @@
   font-weight: 300;
   color: var(--pink);
 }
-.pricing__price {
+.pricing__price-basic {
   display: inline-block;
   vertical-align: top;
   margin-left: 17%;
   margin-top: 70px;
   width: 25%;
 }
-.pricing__benefits {
+.pricing__benefits-basic {
   display: inline-block;
   width: 55%;
   margin-top: 25px;
   margin-bottom: 51px;
 }
-.pricing__benefits li {
+.pricing__benefits-basic li {
   list-style: none;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
-.pricing__benefits li:not(:last-child) {
+.pricing__benefits-basic li:not(:last-child) {
   margin-bottom: 20px;
 }
-.pricing__benefits li img {
+.pricing__benefits-basic li img {
   margin-right: 10px;
 }
 .pricing__button-container {
@@ -328,7 +327,135 @@
   color: var(--white);
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -13px);
+  transform: translate(-50%, -25px);
+}
+.pricing__button--blue {
+  width: 150px;
+  height: 50px;
+  background: var(--blue-price);
+  border: none;
+  border-radius: 23px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--white);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -25px);
+}
+.pricing__button--green {
+  width: 150px;
+  height: 50px;
+  background: var(--green);
+  border: none;
+  border-radius: 23px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--white);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -25px);
+}
+.pricing__professional {
+  width: 78%;
+  margin: 0 auto;
+  border: 1px solid var(--blue-price);
+  border-radius: 18px;
+  margin-top: 54px;
+}
+.pricing__professional p:nth-child(1) {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--plan-name);
+}
+.pricing__professional p:nth-child(2) {
+  font-family: "Open Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 300;
+  color: var(--blue-price);
+}
+.pricing__professional p:nth-child(3) {
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+.pricing__price-professional {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 70px;
+  width: 50%;
+  margin-left: 5%;
+  text-align: center;
+}
+.pricing__benefits-professional {
+  display: inline-block;
+  width: 40%;
+  margin-top: 25px;
+  margin-bottom: 51px;
+}
+.pricing__benefits-professional li {
+  list-style: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.pricing__benefits-professional li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.pricing__benefits-professional li img {
+  margin-right: 10px;
+}
+.pricing__premium {
+  width: 78%;
+  margin: 0 auto;
+  border: 1px solid var(--green);
+  border-radius: 18px;
+  margin-top: 54px;
+}
+.pricing__premium p:nth-child(1) {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--plan-name);
+}
+.pricing__premium p:nth-child(2) {
+  font-family: "Open Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 300;
+  color: var(--green);
+}
+.pricing__premium p:nth-child(3) {
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+.pricing__price-premium {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 70px;
+  width: 40%;
+  margin-left: 5%;
+  text-align: center;
+}
+.pricing__benefits-premium {
+  display: inline-block;
+  width: 50%;
+  margin-top: 25px;
+  margin-bottom: 51px;
+}
+.pricing__benefits-premium li {
+  list-style: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.pricing__benefits-premium li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.pricing__benefits-premium li img {
+  margin-right: 10px;
 }
 
 * {
