@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
     <title>OXYGEN Shop</title>
 </head>
@@ -149,44 +148,47 @@
 			</div>
 
 		</section>
-		<section>
-			<div>
+		<section class="questions">
+			<div class="questions__title">
 				<h4>Any questions?</h4>
 				<p>Leave your email address or call us!</p>
 			</div>
-			<div>
+			<div class="questions__email">
 				<img src="/images/mail_icon.png" alt="a mail icon">
 				<p>info@bestshop.xyz</p>
 			</div>
-			<div>
+			<div class="questions__phone">
 				<img src="/images/phone_icon.png" alt="a phone icon">
 				<p>123 456 789</p>
 			</div>
-			<form action="">
-				<div>
+			<form action="" class="questions__form">
+				<div class="questions__form-name">
 					<label for="name">NAME</label>
 					<input type="text" name="name" id="name">
 				</div>
-				<div>
+				<div class="questions__form-email">
 					<label for="email">EMAIL</label>
-					<input type="text" name="name" id="email">
+					<input type="email" name="name" id="email">
 				</div>
 			</form>
-			<div>
+			<div class="questions__terms">
 				<input type="checkbox" name="name" id="checkbox">
 				<label for="checkbox">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
 			</div>
-			<div>
+			<div class="questions__send-button">
 				<button>Send</button>
 			</div>
-			<footer>
-				<div>
-					<p>OXYGENShop</p>
-					<p>© 2022 OXYGEN, All Rights Reserved</p>
-				</div>
-				<div>
-					<img src="/images/twitter_logo.png" alt="twitter logo">
-					<img src="/images/facebook_logo.png" alt="facebook_logo">
+
+			<footer class="footer">
+				<div class="footer__big-div">
+					<div class="footer__title">
+						<p>OXYGENShop</p>
+						<p>© 2022 OXYGEN, All Rights Reserved</p>
+					</div>
+					<div class="footer__logos">
+						<img src="/images/twitter_logo.png" alt="twitter logo">
+						<img src="/images/facebook_logo.png" alt="facebook_logo">
+					</div>
 				</div>
 			</footer>
 		</section>

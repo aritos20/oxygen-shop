@@ -1,0 +1,38 @@
+.footer {
+    height: 89px;
+    background: #F7F7F7;
+    box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+
+    &__big-div {
+        padding-top: 22px;
+        padding-left: 4.5%;
+    }
+
+    &__title {
+        display: inline-block;
+        width: 65%;
+
+        p:nth-child(1) {
+            font-family: 'Raleway', sans-serif;
+            font-size: 26px;
+            font-weight: 300;
+            color: var(--main-blue);
+        }
+
+        p:nth-child(2) {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 11px;
+            color: var(--gray);
+        }
+    }
+
+    &__logos {
+        display: inline-block;
+        width: 30%;
+
+        img:nth-child(1) {
+            margin-right: 20px;
+        }
+    }
+}

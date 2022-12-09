@@ -1,0 +1,130 @@
+@mixin contact_style() {
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray);
+}
+
+@mixin label_style_form() {
+    display: block;
+    font-family: 'Open Sans';
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--main-blue);
+    letter-spacing: 3.28px;
+    margin-bottom: 10px;
+}
+
+@mixin input_style_form() {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #95989A;
+    width: 83%;
+}
+
+.questions {
+    margin-top: 77px;
+
+    &__title {
+        margin-left: 8%;
+
+        h4 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            color: var(--black);
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--black);
+        }
+    }
+
+    &__email {
+        margin-left: 8%;
+        margin-top: 42px;
+
+        p {
+            @include contact_style();
+        }
+    }
+
+    &__phone {
+        margin-left: 8%;
+        margin-top: 12px;
+        margin-bottom: 55px;
+
+        p {
+            @include contact_style();
+        }
+    }
+
+    &__form {
+        margin-left: 8%;
+    }
+
+    &__form-name {
+        margin-bottom: 42px;
+
+        label{
+            @include label_style_form();
+
+        }
+
+        input {
+            @include input_style_form();
+        }
+    }
+
+    &__form-email {
+        margin-bottom: 31px;
+
+        label {
+            @include label_style_form();
+        }
+
+        input {
+            @include input_style_form();
+        }
+    }
+
+    &__terms {
+        margin-left: 8%;
+        margin-bottom: 33px;
+        width: 74%;
+
+        input {
+            zoom: 2;
+        }
+
+        label {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            color: #707070;
+        }
+    }
+
+    &__send-button {
+        margin-left: 25%;
+        margin-bottom: 44px;
+
+        button {
+            width: 226px;
+            height: 57px;
+            background: var(--main-blue);
+            box-shadow:  5px 10px 14px rgba(7, 172, 230, 0.29);
+            border-radius: 35px;
+            border: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+        }
+    }
+}
