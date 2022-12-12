@@ -15,169 +15,190 @@
 			<nav class="header__nav">
 				<img class="header__burger-menu" src="/images/menu.png" alt="Dropdown menu icon">
 			</nav>
+			<nav class="header__nav-options">
+				<li><a href="#why-us">Why us</a></li>
+				<li><a href="#benefits">Benefits</a></li>
+				<li><a href="#prices">Prices</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</nav>
     </header>
     <main>
 
-        <section class="section-1">
+        <section class="section-1" id="why-us">
 			<div class="section-1__info">
             	<h2>Sell More!</h2>
 				<p>Open shop on our platform and increase your sales</p>
 				<button type="button">Open your shop</button>
 			</div>
-			<div class="section-1__img">
-            	<img src="/images/background_1.png" alt="a background image of a human typing in a laptop">
-			</div>
+        	<img class="section-1__img" src="/images/background_desktop.png" alt="a background image of a human typing in a laptop">
         </section>
 
         <section class="section-2">
             <h3 class="section-2__title">The most popular sales platform in country</h3>
-            <div class="section-2__info-1">
-				<span class="section-2__dot--pink">
-					<img src="/images/human_shape.png" alt="a human shape">
-				</span>
-                <p class="section-2__stats">100000+</p>
-                <p class="section-2__text">daily entries</p>
-            </div>
-            <div class="section-2__info-2">
-                <span class="section-2__dot--blue">
-					<img src="/images/eye.png" alt="an eye">
-				</span>
-                <p class="section-2__stats">2000000+</p>
-                <p class="section-2__text">seen products every day</p>
-            </div>
-			<div class="section-2__info-3">
-				<span class="section-2__dot--green">
-					<img src="/images/posts.png" alt="posts">
-				</span>
-                <p class="section-2__stats">10000+</p>
-                <p class="section-2__text">added posts daily</p>
-            </div>
+			<div class="section-2__general-info">
+            	<div class="section-2__info-1">
+					<span class="section-2__dot--pink">
+						<img src="/images/human_shape.png" alt="a human shape">
+					</span>
+            	    <p class="section-2__stats">100000+</p>
+            	    <p class="section-2__text">daily entries</p>
+            	</div>
+            	<div class="section-2__info-2">
+            	    <span class="section-2__dot--blue">
+						<img src="/images/eye.png" alt="an eye">
+					</span>
+            	    <p class="section-2__stats">2000000+</p>
+            	    <p class="section-2__text">seen products every day</p>
+            	</div>
+				<div class="section-2__info-3">
+					<span class="section-2__dot--green">
+						<img src="/images/posts.png" alt="posts">
+					</span>
+            	    <p class="section-2__stats">10000+</p>
+            	    <p class="section-2__text">added posts daily</p>
+            	</div>
+			</div>
         </section>
 
-		<section class="section-3">
+		<section class="section-3" id="benefits">
 			<div class="section-3__card-1">
 				<div class="section-3__img-shape-1">
 					<img src="/images/laptop.png" alt="a laptop">
+					<img src="images/laptop_desktop.png" alt="a laptop">
 					<span class="section-3__shape-1"></span>
 				</div>
 				<div class="section-3__text-1">
 					<h4 class="section-3__title-1">Be always first</h4>
 					<p class="section-3__info-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<span class="section-3__bottom-line--pink"></span>
 				</div>
 			</div>
 			<div class="section-3__card-2">
 				<div class="section-3__img-shape-2">
 					<span class="section-3__shape-2">
 						<img src="/images/iphone.png" alt="an iphone">
+						<img src="/images/iphone_desktop.png" alt="an iphone">
 					</span>
 				</div>
 				<div class="section-3__text-2">
 					<h4 class="section-3__title-2">Your shop is where you are!</h4>
 					<p class="section-3__info-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<span class="section-3__bottom-line--blue"></span>
 				</div>
 			</div>
-			<div class="section-3__card-3">
-				<div class="section-3__text-3">
-					<h4 class="section-3__title-3">Increase recognition your brand!</h4>
-					<p class="section-3__info-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+			<div class="section-3__big-card-3">
+				<div class="section-3__card-3">
+					<div class="section-3__text-3">
+						<h4 class="section-3__title-3">Increase recognition your brand!</h4>
+						<p class="section-3__info-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<span class="section-3__bottom-line--green"></span>
+					</div>
 				</div>
-			</div>
-			<div class="section-3__trumpet">
-				<img src="/images/trumpet.png" alt="a trumpet">
+				<div class="section-3__trumpet">
+					<img src="/images/trumpet.png" alt="a trumpet">
+				</div>
 			</div>
 		</section>
 
-		<section class="pricing">
+		<section class="pricing" id="prices">
 			<h4 class="pricing__title">Pricing</h4>
-			<div class="pricing__basic">
-				<div class="pricing__price-basic">
-					<p>Basic</p>
-					<p>$0</p>
+			<div class="pricing__global">
+				<div class="pricing__basic">
+					<div class="pricing__price-basic">
+						<p>Basic</p>
+						<p>$0</p>
+					</div>
+					<div class="pricing__benefits-basic">
+						<ul class="pricing__checkboxes">
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">100 MB HDD</li>
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">1 Subdomain</li>
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">2 E-mails</li>
+							<li><img src="./images/red_checkbox.png" alt="checkbox unmarked">Two years license</li>
+							<li><img src="./images/red_checkbox.png" alt="checkbox unmarked">Full support</li>
+						</ul>
+					</div>
+					<div class="pricing__button-container">
+						<button class="pricing__button--red">Begin</button>
+					</div>
 				</div>
-				<div class="pricing__benefits-basic">
-					<ul class="pricing__checkboxes">
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">100 MB HDD</li>
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">1 Subdomain</li>
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">2 E-mails</li>
-						<li><img src="./images/red_checkbox.png" alt="checkbox unmarked">Two years license</li>
-						<li><img src="./images/red_checkbox.png" alt="checkbox unmarked">Full support</li>
-					</ul>
+				<div class="pricing__professional">
+					<div class="pricing__price-professional">
+						<p>Professional</p>
+						<p>$25</p>
+						<p>Limited offer</p>
+					</div>
+					<div class="pricing__benefits-professional">
+						<ul class="pricing__checkboxes">
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">500 MB HDD</li>
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">2 Subdomains</li>
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">5 E-mails</li>
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">One year license</li>
+							<li><img src="./images/red_checkbox.png" alt="checkbox unmarked">Full support</li>
+						</ul>
+					</div>
+					<div class="pricing__button-container">
+						<button class="pricing__button--blue">Begin</button>
+					</div>
 				</div>
-				<div class="pricing__button-container">
-					<button class="pricing__button--red">Begin</button>
-				</div>
-			</div>
-			<div class="pricing__professional">
-				<div class="pricing__price-professional">
-					<p>Professional</p>
-					<p>$25</p>
-					<p>Limited offer</p>
-				</div>
-				<div class="pricing__benefits-professional">
-					<ul class="pricing__checkboxes">
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">500 MB HDD</li>
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">2 Subdomains</li>
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">5 E-mails</li>
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">One year license</li>
-						<li><img src="./images/red_checkbox.png" alt="checkbox unmarked">Full support</li>
-					</ul>
-				</div>
-				<div class="pricing__button-container">
-					<button class="pricing__button--blue">Begin</button>
-				</div>
-				
-			</div>
-			<div class="pricing__premium">
-				<div class="pricing__price-premium">
-					<p>Premium</p>
-					<p>$60</p>
-					<p>Limited offer</p>
-				</div>
-				<div class="pricing__benefits-premium">
-					<ul class="pricing__checkboxes">
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">2 GB HDD</li>
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">5 Subdomains</li>
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">20 E-mails</li>
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">Two years license</li>
-						<li><img src="./images/green_checkbox.png" alt="checkbox marked">Full support</li>
-					</ul>
-				</div>
-				<div class="pricing__button-container">
-					<button class="pricing__button--green">Begin</button>
+				<div class="pricing__premium">
+					<div class="pricing__price-premium">
+						<p>Premium</p>
+						<p>$60</p>
+						<p>Limited offer</p>
+					</div>
+					<div class="pricing__benefits-premium">
+						<ul class="pricing__checkboxes">
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">2 GB HDD</li>
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">5 Subdomains</li>
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">20 E-mails</li>
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">Two years license</li>
+							<li><img src="./images/green_checkbox.png" alt="checkbox marked">Full support</li>
+						</ul>
+					</div>
+					<div class="pricing__button-container">
+						<button class="pricing__button--green">Begin</button>
+					</div>
 				</div>
 			</div>
 
 		</section>
-		<section class="questions">
-			<div class="questions__title">
-				<h4>Any questions?</h4>
-				<p>Leave your email address or call us!</p>
-			</div>
-			<div class="questions__email">
-				<img src="/images/mail_icon.png" alt="a mail icon">
-				<p>info@bestshop.xyz</p>
-			</div>
-			<div class="questions__phone">
-				<img src="/images/phone_icon.png" alt="a phone icon">
-				<p>123 456 789</p>
-			</div>
-			<form action="" class="questions__form">
-				<div class="questions__form-name">
-					<label for="name">NAME</label>
-					<input type="text" name="name" id="name">
+		<section class="questions" id="contact">
+			<div class="questions__contact">
+				<div class="questions__title">
+					<h4>Any questions?</h4>
+					<p>Leave your email address or call us!</p>
 				</div>
-				<div class="questions__form-email">
-					<label for="email">EMAIL</label>
-					<input type="email" name="name" id="email">
+				<div class="questions__email-phone">
+					<div class="questions__email">
+						<img src="/images/mail_icon.png" alt="a mail icon">
+						<p>info@bestshop.xyz</p>
+					</div>
+					<div class="questions__phone">
+						<img src="/images/phone_icon.png" alt="a phone icon">
+						<p>123 456 789</p>
+					</div>
 				</div>
-			</form>
-			<div class="questions__terms">
-				<input type="checkbox" name="name" id="checkbox">
-				<label for="checkbox">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
 			</div>
-			<div class="questions__send-button">
-				<button>Send</button>
+			<div class="questions__form-section">
+				<form action="" class="questions__form">
+					<div class="questions__form-name">
+						<label for="name">NAME</label>
+						<input type="text" name="name" id="name">
+					</div>
+					<div class="questions__form-email">
+						<label for="email">EMAIL</label>
+						<input type="email" name="name" id="email">
+					</div>
+				</form>
+				<div class="questions__terms">
+					<input type="checkbox" name="name" id="checkbox">
+					<label for="checkbox"><p>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p></label>
+				</div>
+				<div class="questions__send-button">
+					<button>Send</button>
+				</div>
 			</div>
+		</section>
 
 			<footer class="footer">
 				<div class="footer__big-div">
@@ -191,7 +212,6 @@
 					</div>
 				</div>
 			</footer>
-		</section>
     </main>
 </body>
 </html>

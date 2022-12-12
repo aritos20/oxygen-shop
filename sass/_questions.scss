@@ -99,10 +99,16 @@
         width: 74%;
 
         input {
-            zoom: 2;
+            vertical-align: top;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
 
-        label {
+        p {
+            width: 82%;
+            display: inline-block;
             font-family: 'Open Sans', sans-serif;
             font-weight: 400;
             font-size: 12px;
@@ -125,6 +131,53 @@
             font-size: 13px;
             font-weight: 700;
             color: var(--white);
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .questions {
+        display: flex;
+
+        h4 {
+            font-size: 49px;
+            margin-bottom: 22px;
+        }
+
+        &__contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            min-width: 50%;
+        }
+
+        &__email {
+            margin-top: 12px;
+            display: flex;
+
+            img {
+                min-height: 0;
+                height: 22px;
+            }
+        }
+
+        &__phone {
+            display: flex;
+
+            img {
+                min-height: 0;
+                height: 22px;
+            }
+
+            p {
+                white-space: nowrap;
+            }
+        }
+
+        &__email-phone {
+            display: flex;
+            margin-right: 85px;
+            margin-top: 32px;
         }
     }
 }

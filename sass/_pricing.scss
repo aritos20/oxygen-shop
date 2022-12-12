@@ -31,6 +31,12 @@
     border-radius: 18px;
 }
 
+@mixin hover_card($shadow-color) {
+    width: 90%;
+    box-shadow: 5px 10px 27px $shadow-color;
+    transition: width 0.25s linear;
+}
+
 .pricing {
 
     &__title {
@@ -43,7 +49,7 @@
 
     &__basic {
         @include pricing_cards(var(--pink));
-        margin-top: 14px;
+        margin-top: 54px;
 
         p:nth-child(1) {
             @include plan_name();
@@ -57,14 +63,15 @@
     &__price-basic {
         display: inline-block;
         vertical-align: top;
-        margin-left: 17%;
+        margin-left: 5%;
         margin-top: 70px;
-        width: 25%;
+        width: 47%;
+        text-align: center;
     }
     
     &__benefits-basic {
         display: inline-block;
-        width: 55%;
+        width: 45%;
         margin-top: 25px;
         margin-bottom: 51px;
 
@@ -136,14 +143,14 @@
         display: inline-block;
         vertical-align: top;
         margin-top: 70px;
-        width: 50%;
+        width: 47%;
         margin-left: 5%;
         text-align: center;
     }
 
     &__benefits-professional {
         display: inline-block;
-        width: 40%;
+        width: 45%;
         margin-top: 25px;
         margin-bottom: 51px;
 
@@ -185,14 +192,14 @@
         display: inline-block;
         vertical-align: top;
         margin-top: 70px;
-        width: 40%;
+        width: 47%;
         margin-left: 5%;
         text-align: center;
     }
 
     &__benefits-premium {
         display: inline-block;
-        width: 50%;
+        width: 45%;
         margin-top: 25px;
         margin-bottom: 51px;
 
@@ -208,6 +215,79 @@
 
         li img {
             margin-right: 10px;
+        }
+    }
+
+    &__basic:hover {
+        @include hover_card(rgba(251, 59, 100, 0.29));
+    }
+
+    &__professional:hover {
+        @include hover_card(rgba(7, 172, 230, 0.29));
+    }
+
+    &__premium:hover {
+        @include hover_card(rgba(85, 223, 180, 0.29));
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    @mixin card_content_flex() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .pricing {
+
+        &__title {
+            margin-top: 127px;
+        }
+
+        &__global {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            gap: 80px;
+        }
+
+        &__basic {
+            @include card_content_flex();
+        }
+
+        &__price-basic {
+            margin-bottom: 16px;
+        }
+
+        &__benefits-basic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+        }
+
+        &__professional {
+            @include card_content_flex();
+        }
+        
+        &__benefits-professional {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+        }
+
+        &__premium {
+            @include card_content_flex();
+        }
+        
+        &__benefits-premium {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
         }
     }
 }

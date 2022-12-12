@@ -75,3 +75,20 @@
         }
     }
 }
+
+@media only screen and (min-width: 1000px) {
+    .section-2 {
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__general-info {
+            margin-top: 100px;
+            margin-bottom: 122px;
+            display: flex;
+            justify-content: center;
+            gap: 200px;
+        }
+    }
+}

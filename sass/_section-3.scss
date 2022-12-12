@@ -44,12 +44,16 @@
         position: relative;
         width: 100%;
 
-        img {
+        img:nth-child(1) {
             position: absolute;
             left: 50%;
             transform: translate(-50%);
-            top: 23%;
+            top: 20px;
             z-index: 2;
+        }
+
+        img:nth-child(2) {
+            display: none;
         }
     }
 
@@ -71,7 +75,7 @@
 
     &__title-1 {
         @include title_style();
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 
     &__info-1 {
@@ -94,6 +98,10 @@
         height: 131px;
         border-radius: 50%;
         background: var(--main-blue);
+
+        img:nth-child(2) {
+            display: none;
+        }
     }
 
     &__text-2 {
@@ -135,5 +143,114 @@
             margin: 0 auto;
             margin-top: 24px;
         }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    @mixin line($color) {
+        display: block;
+        width: 327px;
+        border-top: 4px solid $color;
+        margin-top: 50px;
+    }
+
+    .section-3 {
+
+        &__card-1 {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        &__img-shape-1 {
+            position: relative;
+            width: 100%;
+
+            img:nth-child(1) {
+                display: none;
+            }
+
+            img:nth-child(2) {
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                transform: translate(-60%);
+                top: 100px;
+                z-index: 2;
+            }
+        }
+
+        &__shape-1 {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin-top: 0;
+            right: 50px;
+            top: 50px;
+        }
+
+        &__title-1 {
+            font-size: 36px;
+        }
+
+        &__info-1 {
+            font-size: 16px;
+        }
+
+        &__bottom-line--pink {
+            @include line(var(--pink));
+        }
+
+        &__card-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__shape-2 {
+            width: 320px;
+            height: 320px;
+            transform: translate(-55%, -80px);
+
+            img:nth-child(1) {
+                display: none;
+            }
+
+            img:nth-child(2) {
+                display: inline-block;
+            }
+        }
+
+        &__text-2 {
+            margin-bottom: 100px;
+        }
+
+        &__bottom-line--blue {
+            @include line(var(--main-blue));
+        }
+
+        &__big-card-3 {
+            width: 83%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+        }
+
+        &__card-3 {
+            width: 120%;
+        }
+
+        &__trumpet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 295px;
+        }
+
+        &__bottom-line--green {
+            @include line(var(--green));
+        }
+
     }
 }
