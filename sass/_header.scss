@@ -17,9 +17,13 @@
         font-size: 32px;
     }
 
-    &__nav {
+    &__dropdown-menu {
         display: inline;
         width: 13%;
+    }
+
+    &__burger {
+        display: inline;
     }
 
     &__nav-options {

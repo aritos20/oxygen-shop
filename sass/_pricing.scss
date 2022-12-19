@@ -22,6 +22,7 @@
     font-weight: 700;
     font-size: 13px;
     color: var(--white);
+    cursor: pointer;
 }
 
 @mixin pricing_cards($color-card) {
@@ -32,9 +33,9 @@
 }
 
 @mixin hover_card($shadow-color) {
-    width: 90%;
+    transform: scale(1.08);
     box-shadow: 5px 10px 27px $shadow-color;
-    transition: width 0.25s linear;
+    transition: transform 0.25s linear;
 }
 
 .pricing {

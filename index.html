@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/styles.css">
     <title>OXYGEN Shop</title>
 </head>
 <body>
+
     <header class="header">
 			<div class="header__title">
 				<h1>OXYGENShop</h1>
 			</div>
-			<nav class="header__nav">
+			<div class="header__burger">
 				<img class="header__burger-menu" src="images/menu.png" alt="Dropdown menu icon">
-			</nav>
-			<nav class="header__nav-options">
-				<li><a href="#why-us">Why us</a></li>
-				<li><a href="#benefits">Benefits</a></li>
-				<li><a href="#prices">Prices</a></li>
-				<li><a href="#contact">Contact</a></li>
+			</div>
+			<nav class="header__dropdown-menu">
+				<ul class="header__nav-options">
+					<li><a href="#why-us">Why us</a></li>
+					<li><a href="#benefits">Benefits</a></li>
+					<li><a href="#prices">Prices</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
 			</nav>
     </header>
-    <main>
 
+	<main>
         <section class="section-1" id="why-us">
 			<div class="section-1__info">
             	<h2>Sell More!</h2>
@@ -207,8 +210,12 @@
 						<p>© 2022 OXYGEN, All Rights Reserved</p>
 					</div>
 					<div class="footer__logos">
-						<img src="images/twitter_logo.png" alt="twitter logo">
-						<img src="images/facebook_logo.png" alt="facebook_logo">
+						<a href="https://twitter.com/?lang=es" target="_blank">
+							<img src="images/twitter_logo.png" alt="twitter logo">
+						</a>
+						<a href="https://es-es.facebook.com/" target="_blank">
+							<img src="images/facebook_logo.png" alt="facebook_logo">
+						</a>
 					</div>
 				</div>
 			</footer>
