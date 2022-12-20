@@ -23,8 +23,45 @@
 .header__burger {
   display: inline;
 }
+.header__burger-menu.active {
+  display: none;
+}
+.header__x-menu {
+  display: none;
+}
+.header__x-menu.active {
+  display: inline-block;
+}
 .header__nav-options {
   display: none;
+}
+.header__nav-options.active {
+  position: relative;
+  width: 100%;
+  height: 175px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
+}
+.header__nav-options.active li {
+  list-style: none;
+  margin-left: 7%;
+}
+.header__nav-options.active a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 3.28px;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+.header__nav-options.active a:hover {
+  color: var(--black);
 }
 
 @media only screen and (min-width: 1000px) {
