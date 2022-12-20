@@ -946,4 +946,19 @@ body {
   --plan-name: #13253B;
 }
 
+.arrow {
+  position: fixed;
+  z-index: 55;
+  border-bottom: 0.25rem solid;
+  border-right: 0.25rem solid;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  bottom: 5%;
+  left: 91%;
+  color: var(--main-blue);
+  transform: rotate(-135deg);
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */

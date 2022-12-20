@@ -20,7 +20,6 @@ const scrollProgressBar = () => {
     let scrollDistance = -(body.getBoundingClientRect().top);
     let progressPercentage = (scrollDistance / (body.getBoundingClientRect().height - document.documentElement.clientHeight)) * 100;
     let val = Math.floor(progressPercentage);
-    console.log(val);
 
     progressBar.style.width = val + '%';
 
@@ -31,3 +30,15 @@ const scrollProgressBar = () => {
 
 window.addEventListener('scroll', scrollProgressBar);
 
+// Arrow to the top
+
+const arrow = document.querySelector('.arrow');
+
+arrow.addEventListener('click', () => {
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
+    }, 200);
+})
