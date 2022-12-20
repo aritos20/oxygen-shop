@@ -42,3 +42,31 @@ arrow.addEventListener('click', () => {
         })
     }, 200);
 })
+
+// Form validation
+
+const formName = document.querySelector('#name');
+const formEmail = document.querySelector('#email');
+const emailRegexValidation = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+formName.addEventListener('input', () => {
+    if (formName.value.length >= 2 && formName.value.length <= 100) {
+        formName.style.borderBlockColor = "green";
+    } else {
+        formName.style.borderBlockColor = "red";
+    }
+    if (!formName.value.length) {
+        formName.style.borderBlockColor = "#A5A5A5";
+    }
+});
+
+formEmail.addEventListener('input', () => {
+    console.log(typeof formEmail.value)
+    if (emailRegexValidation.test(formEmail.value)) {
+        formEmail.style.borderBlockColor = "green";
+    } else {
+        formEmail.style.borderBlockColor = "red";
+    } if (!formEmail.value.length) {
+        formEmail.style.borderBlockColor = "#A5A5A5";
+    }
+});
