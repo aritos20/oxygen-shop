@@ -10,6 +10,25 @@
 <body>
 	<span class="arrow"></span>
 	<div class="progress-bar"></div>
+
+	<div class="big-modal-container">
+		<section class="modal hidden">
+			<div class="modal__close-btn-container">
+				<button class="modal__btn-close">X</button>
+			</div>
+			<div>
+				<h3>Weekly Newsletter!</h3>
+				<p>
+					Subscribe to our newslletter, you will get weekly information about our services.
+				</p>
+			</div>
+
+			<input type="email" id="modal-email" placeholder="Enter your email">
+			<button class="modal__submit-btn">Submit</button>
+		</section>
+	</div>
+	<div class="overlay hidden"></div>
+
     <header class="header">
 			<div class="header__title">
 				<h1>OXYGENShop</h1>
@@ -200,7 +219,7 @@
 					<label for="checkbox"><p>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p></label>
 				</div>
 				<div class="questions__send-button">
-					<button>Send</button>
+					<button id="send-form">Send</button>
 				</div>
 			</div>
 		</section>
