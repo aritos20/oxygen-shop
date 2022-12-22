@@ -1,3 +1,7 @@
+// email regex for the validation
+
+const emailRegexValidation = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 // Burger menu
 
 const burgerMenu = document.querySelector('#burger-menu');
@@ -11,10 +15,21 @@ burgerMenu.addEventListener('click', () => {
     imgXMenu.classList.toggle('active');
 });
 
-// Scroll percentage bar 
+// Scroll percentage bar and modal functionality
 
 const progressBar = document.querySelector('.progress-bar');
 const body = document.querySelector('body');
+const modal = document.querySelector('#modal');
+const modalOverlay = document.querySelector('#modal-overlay');
+let modalSwitch = false;
+
+const myTimeout = setTimeout(() => {
+    if (modalSwitch === false) {
+        modal.classList.toggle('hidden');
+        modalOverlay.classList.toggle('hidden');
+        modalSwitch = true; 
+    }
+}, 5000);
 
 const scrollProgressBar = () => {
     let scrollDistance = -(body.getBoundingClientRect().top);
@@ -26,9 +41,48 @@ const scrollProgressBar = () => {
     if (val < 0) {
         progressBar.style.width = '0%';
     }
+
+    if (val >= 25 && modalSwitch === false) {
+        clearTimeout(myTimeout);
+        modal.classList.toggle('hidden');
+        modalOverlay.classList.toggle('hidden');
+        modalSwitch = true;
+    }
 };
 
 window.addEventListener('scroll', scrollProgressBar);
+
+const closeModalButton = document.querySelector('.modal__btn-close');
+closeModalButton.addEventListener('click', () => {
+    modal.classList.toggle('hidden');
+    modalOverlay.classList.toggle('hidden');
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === 'Escape') {
+        modal.classList.toggle('hidden');
+        modalOverlay.classList.toggle('hidden');
+    }
+});
+
+modalOverlay.addEventListener('click', () => {
+    if (modalSwitch === true) {
+        modal.classList.toggle('hidden');
+        modalOverlay.classList.toggle('hidden');
+    }
+});
+
+const modalEmail = document.querySelector('#modal-email');
+
+modalEmail.addEventListener('input', () => {
+    if (emailRegexValidation.test(modalEmail.value)) {
+        modalEmail.style.borderBlockColor = 'green';
+    } else {
+        modalEmail.style.borderBlockColor = 'red';
+    } if (!modalEmail.value.length) {
+        modalEmail.style.borderBlockColor = '#ddd';
+    }
+})
 
 // Arrow to the top
 
@@ -49,7 +103,6 @@ const formName = document.querySelector('#name');
 const formEmail = document.querySelector('#email');
 const sendButton = document.querySelector('#send-form');
 const checkbox = document.querySelector('#checkbox');
-const emailRegexValidation = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
 formName.addEventListener('input', () => {
@@ -105,3 +158,22 @@ const jsonPlaceholder = async () => {
 }
 
 sendButton.addEventListener('click', jsonPlaceholder);
+
+// Api to get currencies changes for EUR
+
+const selectedCurrency = document.querySelector('#currencies');
+
+const currencyApi = async () => {
+    try {
+        const response = await fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd/${selectedCurrency.value}.json`);
+
+        if (response.ok) {
+            const jsonResponse = await response.json();
+            const formattedCurrency = jsonResponse[selectedCurrency.value];
+        }
+    } catch (error) {
+        console.log(error); 
+    }
+}
+
+document.addEventListener('click', currencyApi);

@@ -48,6 +48,21 @@
         margin-top: 53px;
     }
 
+    &__currencies {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        
+
+        select {
+            border: 1px solid var(--main-blue);
+            width: 100px;
+            height: 30px;
+            text-align: center;
+        }
+    }
+
     &__basic {
         @include pricing_cards(var(--pink));
         margin-top: 54px;

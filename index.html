@@ -12,7 +12,7 @@
 	<div class="progress-bar"></div>
 
 	<div class="big-modal-container">
-		<section class="modal hidden">
+		<section class="modal hidden" id="modal">
 			<div class="modal__close-btn-container">
 				<button class="modal__btn-close">X</button>
 			</div>
@@ -27,7 +27,7 @@
 			<button class="modal__submit-btn">Submit</button>
 		</section>
 	</div>
-	<div class="overlay hidden"></div>
+	<div class="overlay hidden" id="modal-overlay"></div>
 
     <header class="header">
 			<div class="header__title">
@@ -126,6 +126,13 @@
 
 		<section class="pricing" id="prices">
 			<h4 class="pricing__title">Pricing</h4>
+			<div class="pricing__currencies">
+				<select name="currencies" id="currencies">
+					<option value="usd">$ USD</option>
+					<option value="eur">€ EUR</option>
+					<option value="gbp">£ GBP</option>
+				</select>
+			</div>
 			<div class="pricing__global">
 				<div class="pricing__basic">
 					<div class="pricing__price-basic">

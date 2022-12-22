@@ -466,6 +466,18 @@
   text-align: center;
   margin-top: 53px;
 }
+.pricing__currencies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.pricing__currencies select {
+  border: 1px solid var(--main-blue);
+  width: 100px;
+  height: 30px;
+  text-align: center;
+}
 .pricing__basic {
   width: 78%;
   margin: 0 auto;
@@ -936,7 +948,7 @@
   padding: 20px;
   min-height: 250px;
   position: absolute;
-  top: 20%;
+  top: 30%;
   background-color: var(--white);
   border: 1px solid #ddd;
   border-radius: 15px;
@@ -948,6 +960,7 @@
   justify-content: flex-end;
 }
 .modal input {
+  outline: none;
   padding: 0.7rem 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
