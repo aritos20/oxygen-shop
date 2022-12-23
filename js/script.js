@@ -162,6 +162,34 @@ sendButton.addEventListener('click', jsonPlaceholder);
 // Api to get currencies changes for EUR
 
 const selectedCurrency = document.querySelector('#currencies');
+const basicPlan = document.querySelector('#basic_plan');
+const professionalPlan = document.querySelector('#professional_plan');
+const premiumPlan = document.querySelector('#premium_plan');
+
+function changePriceByCurrency(currencyValue) {
+    let symbolCurrency;
+    switch (selectedCurrency.value) {
+        case 'usd':
+            symbolCurrency = '$';
+            break;
+        case 'eur':
+            symbolCurrency = '€';
+            break;
+        case 'gbp':
+            symbolCurrency = '£';
+            break;
+    }
+
+    if (selectedCurrency.value !== 'usd') {
+        basicPlan.innerHTML = `${symbolCurrency} 0`;
+        professionalPlan.innerHTML = `${symbolCurrency} ${(currencyValue * 25).toFixed(0)}`;
+        premiumPlan.innerHTML = `${symbolCurrency} ${(currencyValue * 60).toFixed(0)}`
+    } else {
+        basicPlan.innerHTML = `${symbolCurrency} 0`;
+        professionalPlan.innerHTML = `${symbolCurrency} ${(currencyValue * 25)}`;
+        premiumPlan.innerHTML = `${symbolCurrency} ${(currencyValue * 60)}`;
+    }
+}
 
 const currencyApi = async () => {
     try {
@@ -170,10 +198,11 @@ const currencyApi = async () => {
         if (response.ok) {
             const jsonResponse = await response.json();
             const formattedCurrency = jsonResponse[selectedCurrency.value];
+            changePriceByCurrency(formattedCurrency.toFixed(2));
         }
     } catch (error) {
         console.log(error); 
     }
 }
 
-document.addEventListener('click', currencyApi);
+selectedCurrency.addEventListener('change', currencyApi);
