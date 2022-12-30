@@ -24,10 +24,10 @@ const modalOverlay = document.querySelector('#modal-overlay');
 let modalSwitch = false;
 
 const myTimeout = setTimeout(() => {
-    if (modalSwitch === false) {
+    if (!sessionStorage.getItem("modalStatus")) {
         modal.classList.toggle('hidden');
         modalOverlay.classList.toggle('hidden');
-        modalSwitch = true; 
+        sessionStorage.setItem("modalStatus", true);
     }
 }, 5000);
 
@@ -42,11 +42,11 @@ const scrollProgressBar = () => {
         progressBar.style.width = '0%';
     }
 
-    if (val >= 25 && modalSwitch === false) {
+    if (val >= 25 && !sessionStorage.getItem("modalStatus")) {
         clearTimeout(myTimeout);
         modal.classList.toggle('hidden');
         modalOverlay.classList.toggle('hidden');
-        modalSwitch = true;
+        sessionStorage.setItem("modalStatus", true);
     }
 };
 
@@ -66,7 +66,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 modalOverlay.addEventListener('click', () => {
-    if (modalSwitch === true) {
+    if (sessionStorage.getItem("modalStatus")) {
         modal.classList.toggle('hidden');
         modalOverlay.classList.toggle('hidden');
     }
@@ -206,3 +206,45 @@ const currencyApi = async () => {
 }
 
 selectedCurrency.addEventListener('change', currencyApi);
+
+// Images slider
+
+class Slider {
+    constructor(sliderId) {
+        this._sliderId = sliderId;
+    }
+
+    showSlides(n) {
+        let i;
+        let slides = document.querySelectorAll(".slider__imgs");
+        let dots = document.getElementsByClassName("dots__slider");
+        if (n > slides.length) {
+            n = 1;
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            n = slides.length;
+            slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[n - 1].style.display = "block";
+        dots[n - 1].className += " active";
+    }
+}
+
+let slideIndex = 1;
+const sliderId = document.querySelector('#slider');
+const prevButton = document.querySelector("#prev");
+const nextButton = document.querySelector("#next");
+
+let slider = new Slider(sliderId);
+
+slider.showSlides(slideIndex);
+prevButton.addEventListener('click', () => slider.showSlides(slideIndex -= 1));
+nextButton.addEventListener('click', () => slider.showSlides(slideIndex += 1));
+setInterval(() => slider.showSlides(slideIndex += 1), 5000);
