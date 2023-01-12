@@ -130,7 +130,7 @@ sendButton.addEventListener('click', () => {
     if (!emailRegexValidation.test(formEmail.value) || !(formName.value.length >= 2 && formName.value.length <= 100)) {
         alert('Please enter a valid name or email');
     }
-    if (!checkbox.checked) {
+    else if (!checkbox.checked) {
     alert('Please accept the terms and conditions by marking the checkbox');
     }
 });

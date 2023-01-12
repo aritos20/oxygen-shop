@@ -935,6 +935,9 @@
 .footer__logos img:nth-child(1) {
   margin-right: 20px;
 }
+.footer__logos a {
+  text-decoration: none;
+}
 
 .big-modal-container {
   display: flex;
